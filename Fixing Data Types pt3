@@ -1,0 +1,21 @@
+Fix city_mpg, hwy_mpg, cmb_mpg datatypes
+2008 and 2018: convert string to float
+Load datasets data_08_v4.csv and data_18_v4.csv. You should've created these data files in the previous section: Fixing Data Types Pt 2.
+
+# load datasets
+import pandas as pd
+df_08 = pd.read_csv('data_08_v4.csv')
+df_18 = pd.read_csv('data_18_v4.csv')
+​
+# convert mpg columns to floats
+#mpg_columns = ['city_mpg', 'hwy_mpg', 'cmb_mpg'] 
+for c in mpg_columns:
+    #df_18[c] = df_18[c].astype(float) 
+    #df_08[c] = df_08[c].astype(float)
+df_08['city_mpg'] = df_08['city_mpg'].astype(float)
+df_08['hwy_mpg'] = df_08['hwy_mpg'].astype(float)
+df_08['cmb_mpg'] = df_08['cmb_mpg'].astype(float)
+  File "<ipython-input-8-027e65badbcd>", line 6
+    df_08['city_mpg', 'hwy_mpg', 'cmb_mpg'] = df_08['city_mpg', 'hwy_mpg', 'cmb_mpg'].astype(float)
+        ^
+IndentationError: expected an indented block
